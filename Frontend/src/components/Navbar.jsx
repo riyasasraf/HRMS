@@ -9,8 +9,6 @@ const Navbar = () => {
           Team Manager
         </h1>
         <div className="ml-auto px-10">
-          {" "}
-          {/* This will push the Profile component to the right */}
           <Profile />
         </div>
       </div>
