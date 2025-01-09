@@ -1,46 +1,14 @@
 import React from "react";
-
+import Input from "../components/Input";
+import Button from "../components/Button";
 const Signup = () => {
   return (
-    <div className="flex justify-center items-center h-screen ">
-      <div className="w-[90%] max-w-md bg-white shadow-lg rounded-lg p-6">
-        <h2 className="text-2xl font-semibold mb-4 text-center">Signup</h2>
-        <form>
-          <div className="mb-4">
-            <label
-              htmlFor="email"
-              className="block text-gray-700 font-medium mb-1"
-            >
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              placeholder="Enter your email"
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="password"
-              className="block text-gray-700 font-medium mb-1"
-            >
-              Password
-            </label>
-            <input
-              type="password"
-              id="password"
-              placeholder="Enter your password"
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-          <button
-            type="submit"
-            className="w-full bg-blue-500 text-white font-medium py-2 rounded-lg hover:bg-blue-600"
-          >
-            Sign Up
-          </button>
-        </form>
+    <div className="flex items-center justify-center w-screen h-screen ">
+      <div className="w-[25%] bg-slate-200  -mt-32 rounded-xl flex flex-col items-center justify-center p-9">
+        <h1 className="font-medium text-3xl text-slate-800 p-7">Login</h1>
+        <Input type="text" style="" placeholder="User ID / Mail ID" />
+        <Input type="password" style="" placeholder="Password" />
+        <Button value = "Login"/>
       </div>
     </div>
   );
