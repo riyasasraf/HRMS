@@ -5,7 +5,7 @@ import Signup  from './Signup';
 const Homepage = () => {
   return (
     <div className="overflow-hidden h-screen">
-      <Navbar />
+      
       <Signup />
     </div>
   );
