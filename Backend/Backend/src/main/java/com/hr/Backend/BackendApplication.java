@@ -1,4 +1,4 @@
-package com.tm.Backend;
+package com.hr.Backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

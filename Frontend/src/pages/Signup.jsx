@@ -7,12 +7,10 @@ const Signup = () => {
 
   const handleUserIdChange = (e) => {
     setUserId(e.target.value);
-    console.log('userid'+userId)
 
   }
    const handlePasswordChange = (e) => {
      setPassword(e.target.value);
-    console.log("password" + password);
    };
   const handleSumit = () => {
   console.log(userId +" "+ password);
