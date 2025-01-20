@@ -1,12 +1,9 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
-import Signup  from './Signup';
-
+import { ComplexNavbar as Navbar } from '../components/Navbar';
 const Homepage = () => {
   return (
-    <div className="overflow-hidden h-screen">
-      
-      <Signup />
+    <div>
+      <Navbar />
     </div>
   );
 }

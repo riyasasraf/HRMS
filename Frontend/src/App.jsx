@@ -1,17 +1,14 @@
 import React from 'react'
-import Homepage from './pages/Homepage';
 import {
   BrowserRouter as Router, Routes, Route, Link,Navigate
 } from 'react-router-dom';
-import Signup from './pages/Signup';
-import Navbar from './components/Navbar';
+import Homepage from './pages/Homepage';
 
 const App = () => {
   return (
     <Router>
-      <Navbar/>
       <Routes>
-         <Route path="/" element={<Signup/>} />
+        <Route path='/' element={<Homepage/>}/>
       </Routes>
     </Router>
   );
