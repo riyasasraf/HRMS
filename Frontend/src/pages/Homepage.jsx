@@ -1,8 +1,11 @@
-import React from 'react'
-import { ComplexNavbar as Navbar } from '../components/Navbar';
+import React, { useState } from 'react'
+import Navbar from '../components/Navbar/Navbar';
+
 const Homepage = () => {
+
   return (
     <div>
+      
       <Navbar />
     </div>
   );
