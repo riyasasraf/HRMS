@@ -1,13 +1,15 @@
 import React from 'react'
-import Logo from './Navbar/Logo'
+import Logo from '../components/Navbar/Logo'
 const Signin = () => {
   return (
     <>
       <div className="flex min-h-screen flex-1 flex-col  justify-center py-12 lg:px-5 border-[1px]  border-slate-800">
-        <div className=" sm:mx-auto sm:w-full sm:max-w-sm p-14  bg-gray-200 rounded-md">
+        <div className=" sm:mx-auto sm:w-full sm:max-w-sm p-14  bg-slate-100 rounded-md">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm ">
             <div className="flex items-center justify-center">
-              <Logo />
+              <h1 className="text-center text-2xl/9 font-bold tracking-tight text-gray-900   ">
+                Welcome Please
+              </h1>
             </div>
             <h2 className="mt-2 text-center text-2xl/9 font-bold tracking-tight text-gray-900">
               Sign in

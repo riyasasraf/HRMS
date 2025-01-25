@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { NavLink } from "react-router-dom";
 const SideBar = ({ isSidebarVisible }) => {
   const [openDropdowns, setOpenDropdowns] = useState({});
 
@@ -106,24 +106,41 @@ const SideBar = ({ isSidebarVisible }) => {
                   >
                     {menu.subMenu.map((item, subIndex) => (
                       <li key={subIndex}>
-                        <a
-                          href="#"
+                        <div
+                          
                           className="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                         >
-                          {item}
-                        </a>
+                          <NavLink
+                            to={`/${item}`}
+                            className={({ isActive }) =>
+                              isActive ? "text-blue-600" : ""
+                            }
+                          >
+                            {item}
+                          </NavLink>
+                         
+                        </div>
                       </li>
                     ))}
                   </ul>
                 </>
               ) : (
-                <a
-                  href="#"
+                <div
                   className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                 >
                   {menu.icon}
-                  <span className="ms-3">{menu.name}</span>
-                </a>
+                  <span className="ms-3">
+                   
+                    <NavLink
+                      to={`/${menu.name}`}
+                      className={({ isActive }) =>
+                        isActive ? "text-blue-600" : ""
+                      }
+                    >
+                      {menu.name}
+                    </NavLink>
+                  </span>
+                </div>
               )}
             </li>
           ))}

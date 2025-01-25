@@ -12,7 +12,7 @@ const Navbar = ({ toggleSidebar }) => {
 
   return (
     <div className="flex items-center justify-center fixed  w-screen">
-      <div className="w-screen h-12 py-2 px-4 bg-[#00ADB5]  flex items-center justify-between">
+      <div className="w-screen h-12 py-2 px-4 bg-indigo-400  flex items-center justify-between">
         <div
           className={`tham tham-e-squeeze tham-w-6 ${
             isActive ? "tham-active" : ""
@@ -23,7 +23,7 @@ const Navbar = ({ toggleSidebar }) => {
             <div className="tham-inner" />
           </div>
         </div>
-        
+
         <Logo />
         <Profile />
       </div>

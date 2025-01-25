@@ -13,9 +13,7 @@ const Homepage = () => {
 
   return (
     <div className="relative">
-      <Navbar toggleSidebar={toggleSidebar} />
-      <SideBar isSidebarVisible={isSidebarVisible} />
-      <Signin/>
+     
     </div>
   );
 };
