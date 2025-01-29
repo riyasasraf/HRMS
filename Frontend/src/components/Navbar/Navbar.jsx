@@ -1,33 +1,29 @@
 import React, { useState } from "react";
 import Profile from "./Profile";
 import Logo from "./Logo";
+import SideBar from "../SideBar";
 
-const Navbar = ({ toggleSidebar }) => {
-  const [isActive, setActive] = useState(false);
+const Navbar = () => {
+  const [isSidebarVisible, setSidebarVisible] = useState(false);
 
-  const handleToggle = () => {
-    setActive(!isActive);
-    toggleSidebar(); // Call the function to toggle the sidebar
-  };
+ const toggleSidebar = () => setSidebarVisible((prev) => !prev);
 
   return (
-    <div className="flex items-center justify-center fixed  w-screen">
-      <div className="w-screen h-12 py-2 px-4 bg-indigo-400  flex items-center justify-between">
-        <div
-          className={`tham tham-e-squeeze tham-w-6 ${
-            isActive ? "tham-active" : ""
-          }`}
-          onClick={handleToggle}
-        >
-          <div className="tham-box">
-            <div className="tham-inner" />
-          </div>
-        </div>
+    <>
+      <div className=" fixed top-0 left-0  w-screen">
+        <div className="w-screen h-12 py-2 px-4 bg-indigo-400  flex items-center justify-between">
+  
+            <div className="">
+              <div className="" />
+            </div>
+        
 
-        <Logo />
-        <Profile />
+          <Logo />
+          <Profile />
+        </div>
       </div>
-    </div>
+      <SideBar  />
+    </>
   );
 };
 

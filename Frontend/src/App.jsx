@@ -2,30 +2,25 @@ import React from 'react'
 import {
   BrowserRouter as Router, Routes, Route, Link,Navigate
 } from 'react-router-dom';
-import Signin from './pages/Signin';
 import Navbar from './components/Navbar/Navbar';
-import SideBar from './components/SideBar';
-import { useState } from 'react';
+import Homepage from './pages/Homepage';
+import InternManagement from './pages/InternManagement';
 
 const App = () => {
-   const [isSidebarVisible, setSidebarVisible] = useState(false);
-  
-    // Function to toggle the sidebar
-    const toggleSidebar = () => {
-      setSidebarVisible((prevState) => !prevState);
-    };
+
   return (
-    <main className=''>
+    <main className="">
       <Router>
-        <Navbar toggleSidebar={toggleSidebar} />
-        <SideBar isSidebarVisible={isSidebarVisible} />
+        <Navbar />
         <Routes>
           <Route
             path="/*"
             element={
               <>
                 <Routes>
-                  <Route path="/" element={<Signin />} />
+                  <Route path="/" element={<Homepage />} />
+                  <Route path="/Intern Management" element={<InternManagement />} />
+                
                 </Routes>
               </>
             }

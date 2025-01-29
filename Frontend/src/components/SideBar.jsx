@@ -1,56 +1,10 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-const SideBar = ({ isSidebarVisible }) => {
+import menuItems from "../data/menuData";
+const SideBar = ({  }) => {
   const [openDropdowns, setOpenDropdowns] = useState({});
 
-  // Data structure for menus
-  const menuItems = [
-    {
-      name: "Dashboard",
-      icon: (
-        <svg
-          className="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path d="M3 13h8V3H3v10zm10 8h8v-6h-8v6zm-10 0h8v-4H3v4zm10-8h8V3h-8v10z" />
-        </svg>
-      ),
-      subMenu: [],
-    },
-    {
-      name: "Human Resource",
-      icon: (
-        <svg
-          className="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path d="M13 2v10h9l-9 9V11H3l9-9z" />
-        </svg>
-      ),
-      subMenu: ["Hiring Process"],
-    },
-    {
-      name: "Sign Out",
-      icon: (
-        <svg
-          className="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path d="M13 2v10h9l-9 9V11H3l9-9z" />
-        </svg>
-      ),
-      subMenu: [],
-    },
-  ];
+
 
   // Toggle dropdown visibility
   const toggleDropdown = (index) => {
@@ -63,9 +17,7 @@ const SideBar = ({ isSidebarVisible }) => {
   return (
     <aside
       id="default-sidebar"
-      className={`fixed top-0 left-0 z-40 w-64 h-screen mt-12 transition-transform ${
-        isSidebarVisible ? "translate-x-0" : "-translate-x-full"
-      } bg-gray-50 dark:bg-gray-800`}
+      className={`fixed top-0 left-0 z-40 w-64 h-screen mt-12 transition-transform  bg-gray-50 dark:bg-gray-800`}
       aria-label="Sidebar"
     >
       <div className="h-full mb-4 px-3 py-4 overflow-y-auto rounded-r-lg bg-gray-50 dark:bg-gray-800">
